@@ -11,7 +11,7 @@ To evaluate model performance on PPI classification, follow code in Performance_
 To measure the quality of predicted clusters, use GO_score.ipynb, CoLocalization_score_Complex.R, Composite_score_Complex.R in the code folder to calculate GOGO scores, co-localization scores, and composite scores. <br />
 <br />
 <br />
-References:
+### References:
 <br />
 Zhao C, Wang Z. (2018) GOGO: An improved algorithm to measure the semantic similarity between gene ontology terms. Sci Rep, 8, 15107. (GOGO scores)
 <br />
