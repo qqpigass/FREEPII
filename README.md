@@ -1,7 +1,7 @@
 # FREEPII
 Source code for FREEPII <br />
  <br />
-To generate predicted PPIs, follow FREEPII_SEC2-heavy_cv1_example.ipynb in the code folder, and use MCL_Clusters.ipynb to generate predicted clusters. <br />
+To generate predicted PPIs, follow FREEPII_SEC2-heavy_cv1_example.ipynb in the code folder, and use MCL_Clusters.ipynb to generate predicted clusters.
 <br />
 <br />
 To evaluate model performance on PPI classification, follow code in Performance_PPI.R.
