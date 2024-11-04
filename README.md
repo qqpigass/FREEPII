@@ -1,5 +1,5 @@
 # FREEPII
-## Source code for FREEPII <br />
+### Source code for FREEPII <br />
 >> Currently only human data are provided as examples
  <br />
 To generate predicted PPIs, follow FREEPII_SEC2-heavy_cv1_example.ipynb in the code folder, and use MCL_Clusters.ipynb to generate predicted clusters.
