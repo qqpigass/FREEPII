@@ -18,23 +18,15 @@ Please follow the steps below to generate the data required for model training a
 5. Finally, use the codes in code/preprocess/Prepare_name-idx-dict_and_cv_input.ipynb, and Prepare_seq_FCGR_16x_input.ipynb to convert the pre-processed data into input data suitable for FREEPII.
 <br />
 <br />
+
 ### Run FREEPII
 The source code of FREEPII is in the code/FREEPII/FREEPII.ipynb. This code will use SEC2-heavy as an example. <br />
 The model is trained under the scheme of training: testing = 70:30, positive labels: negative labels = 1:1, and performs 5-fold cross-validation. <br />
 
 
-
-To generate predicted PPIs, follow FREEPII_SEC2-heavy_cv1_example.ipynb in the code folder, and use MCL_Clusters.ipynb to generate predicted clusters.
-<br />
-<br />
-To evaluate model performance on PPI classification, follow code in Performance_PPI.R.
-<br />
-<br />
-To measure the quality of predicted clusters, use GO_score.ipynb, CoLocalization_score_Complex.R, Composite_score_Complex.R in the code folder to calculate GOGO scores, co-localization scores, and composite scores. <br />
-<br />
-<br />
-
 ### References
+### Run FREEPII
+
 <br />
 1. Zhao C, Wang Z. (2018) GOGO: An improved algorithm to measure the semantic similarity between gene ontology terms. Sci Rep, 8, 15107.  (GOGO scores)
 <br />
