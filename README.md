@@ -1,6 +1,14 @@
 ## Source code for FREEPII <br />
->> Currently only human data are provided as examples
- <br />
+>> Currently only human data are provided as examples <br />
+
+## Basic data
+The human CF-MS datasets (PXD002892, PXD014820, and PXD015406) were downloaded from Zenodo (doi: 10.5281/zenodo.4106578). <br />
+Among the various files corresponding to different protein quantification strategies provided by the authors, we selected those containing iBAQ intensity of chromatograms for further analysis. <br /> <br />
+
+The human protein complex dataset was downloaded from the CORUM database, and the human protein sequences were retrieved from UniProt database. <br /><br />
+
+We retrieved the semantics and relationships between GO terms from the GO Consortium released on November 4, 2022. <br /><br />
+
 To generate predicted PPIs, follow FREEPII_SEC2-heavy_cv1_example.ipynb in the code folder, and use MCL_Clusters.ipynb to generate predicted clusters.
 <br />
 <br />
