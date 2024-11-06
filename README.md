@@ -24,7 +24,14 @@ The source code of FREEPII is in the code/FREEPII/FREEPII.ipynb. This code will 
 The model is trained under the scheme of training: testing = 70:30, positive labels: negative labels = 1:1, and performs 5-fold cross-validation. <br />
 The training set is further divided into training set and validation set in a ratio of 80:20. <br />
 The training acc, validation acc, training loss and validation loss of each fold will be recorded and used to confirm whether the model is overfitted. <br />
-The average prediction across all folds will be used to evaluate model performance on PPI classification. <br />
+The best model in each fold will be evaluated by the true positive and true negative scores. <br />
+The best model among all folds will be used to generate predictions for all PPIs in the experimental data for clustering analysis. <br />
+The output of FREEPII will include the PPI prediction results of training split, held-out split, del-fold split as well as the prediction results of all PPIs, the protein feature representation learned by the model, and the predicted protein complexes. 
+<br />
+<br />
+
+### Evaluation model performance
+The average prediction across all folds will be used to evaluate model overall performance on PPI classification. <br />
 
 
 ### References
