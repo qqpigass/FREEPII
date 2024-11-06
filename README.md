@@ -11,9 +11,14 @@ We retrieved the semantics and relationships between GO terms from the GO Consor
 
 ### Pre-process data
 Please follow the steps below to generate the data required for model training and performance evaluation. <br />
-1. The protein complexes set is used to generate labels for PPIs in our task. In this preprocessing step, <br />
+1. The protein complexes set is used to generate labels for PPIs in our task. In this preprocessing step,
+2. To converted the protein sequences into frequency matrix chaos game representation (FCGR), please follow the script in code/preprocess/Generate_seq_FCGR_16x.R.
+3. 
+
    we will generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes. <br />
    Please follow the script in code/preprocess/preprocess_complexes.R to generate filtered protein complexes set for further analysis. <br />
+4. 
+5. 
 
 
 
