@@ -1,7 +1,7 @@
-### Source code for FREEPII <br />
+## Source code for FREEPII <br />
 >> Currently only human data are provided as examples <br />
 
-## Basic data
+### Basic data
 The human CF-MS datasets (PXD002892, PXD014820, and PXD015406) were downloaded from Zenodo (doi: 10.5281/zenodo.4106578). <br />
 Among the various files corresponding to different protein quantification strategies provided by the authors, we selected those containing iBAQ intensity of chromatograms for further analysis. <br /> <br />
 
@@ -19,7 +19,7 @@ To measure the quality of predicted clusters, use GO_score.ipynb, CoLocalization
 <br />
 <br />
 
-## References
+### References
 <br />
 1. Zhao C, Wang Z. (2018) GOGO: An improved algorithm to measure the semantic similarity between gene ontology terms. Sci Rep, 8, 15107.  (GOGO scores)
 <br />
