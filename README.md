@@ -9,6 +9,14 @@ The human protein complex dataset was downloaded from the CORUM database, and th
 
 We retrieved the semantics and relationships between GO terms from the GO Consortium released on November 4, 2022. <br /><br />
 
+### Pre-process data
+Please follow the steps below to generate the data required for model training and performance evaluation. <br />
+1. The protein complexes set is used to generate labels for PPIs in our task. In this preprocessing step, <br />
+   we will generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes. <br />
+   Please follow the script in code/preprocess/preprocess_complexes.R to generate filtered protein complexes set for further analysis. <br />
+
+
+
 To generate predicted PPIs, follow FREEPII_SEC2-heavy_cv1_example.ipynb in the code folder, and use MCL_Clusters.ipynb to generate predicted clusters.
 <br />
 <br />
