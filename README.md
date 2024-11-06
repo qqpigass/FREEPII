@@ -19,10 +19,10 @@ Please follow the steps below to generate the data required for model training a
 
 ### Run FREEPII
 The source code of FREEPII is in the code/FREEPII/FREEPII.ipynb. This code will use SEC2-heavy as an example. <br />
-This model is trained under a 5-fold cross-validation scheme. For each fold, the ratio between training:testing = 70:30 and the ratio between positive labels:negative labels = 1:1. <br />
-The training acc, testing acc, training loss and testing loss of each fold will be recorded and used to confirm whether the model is overfitted. <br />
-The best model in each fold is determined by the lowest testing loss in that fold and will be evaluated by true positive and true negative scores. <br />
-The final best model is determined by the lowest testing loss across all folds and will be used to generate predictions for all PPIs in the experimental data for cluster analysis. <br />
+This model is trained under a 5-fold cross-validation scheme. For each fold, the ratio between train:test = 70:30 and the ratio between positive labels:negative labels = 1:1. <br />
+The train acc, test acc, train loss and test loss of each fold will be recorded and used to confirm whether the model is overfitted. <br />
+The best model in each fold is determined by the lowest test loss in that fold and will be evaluated by true positive and true negative scores. <br />
+The final best model is determined by the lowest test loss across all folds and will be used to generate predictions for all PPIs in the experimental data for cluster analysis. <br />
 The output of FREEPII will include the PPI prediction results of training set, heldout set, del-fold set as well as the prediction results of all PPIs, the protein feature representation learned by the model, and the predicted protein complexes.
 <br />
 <br />
