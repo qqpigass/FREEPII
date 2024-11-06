@@ -3,9 +3,9 @@
 
 ### Basic data
 The human CF-MS datasets (PXD002892, PXD014820, and PXD015406) were downloaded from Zenodo (doi: 10.5281/zenodo.4106578). <br />
-Among the various files corresponding to different protein quantification strategies provided by the authors, we selected those containing iBAQ intensity of chromatograms for further analysis. <br /> <br />
+Among the various files corresponding to different protein quantification strategies provided by the authors, we selected those containing iBAQ intensity of chromatograms for further analysis. <br /> 
 
-The human protein complex dataset was downloaded from the CORUM database, and the human protein sequences were retrieved from UniProt database. <br /><br />
+The human protein complex dataset was downloaded from the CORUM database, and the human protein sequences were retrieved from UniProt database. <br />
 
 We retrieved the semantics and relationships between GO terms from the GO Consortium released on November 4, 2022. <br /><br />
 
@@ -16,7 +16,6 @@ Please follow the steps below to generate the data required for model training a
 3. Preprocessing of CF-MS data consists of removing samples with missing or all-zero values ​​and then normalizing the values ​​to a range between 0-1. Please follow the script: code/preprocess/Preprocess_EPF.R, to generate needed data.
 4. To fairly compare with other models, we generated fixed splits for FREEPII and other models. Please follow the scripts: code/preprocess/Generate_split.R, and code/preprocess/Generate_cv_split_csv.R, to generate needed split data.
 5. Finally, use the codes in code/preprocess/Prepare_name-idx-dict_and_cv_input.ipynb, and Prepare_seq_FCGR_16x_input.ipynb to convert the pre-processed data into input data suitable for FREEPII.
-<br />
 <br />
 
 ### Run FREEPII
