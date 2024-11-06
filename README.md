@@ -1,4 +1,4 @@
-## Source code for FREEPII <br />
+## FREEPII <br />
 >> Currently only human data are provided as examples <br />
 
 ### Basic data
