@@ -30,7 +30,9 @@ The output of FREEPII will include the PPI prediction results of training split,
 <br />
 
 ### Evaluation model performance
-The average prediction across all folds will be used to evaluate model overall performance on PPI classification. <br />
+1. PPI classification performance: The average predictions of FREEPII across all folds will be used to evaluate model overall performance on PPI classification. Evaluation indicators include sensitivity, specificity, Matthews correlation coefficient (MCC), area under the receiver-operator characteristic curve (AUC of ROC), etc. Follow the scripts: code/performance/Performance_PPI.R to get the performance scores.
+2. Evaluation of the quality of predicted clusters (with gold-standard): To evaluate the structural compositional similarity between predicted clusters and a reference protein complex dataset, we use the composite score. The composite score is the sum of three components: Overlap, Accuracy, and Maximum Matching Ratio (MMR). Follow the scripts: code/performance/Composite_score_Complex.R to calculate the composite scores of the predicted protein complexes.
+3. Evaluation of the quality of predicted clusters (without gold-standard): 
 
 
 ### References
