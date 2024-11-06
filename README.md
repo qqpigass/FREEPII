@@ -1,5 +1,4 @@
 ## FREEPII <br />
->> Currently only human data are provided <br />
 
 ### Basic data
 The human CF-MS datasets (PXD002892, PXD014820, and PXD015406) were downloaded from Zenodo (doi: 10.5281/zenodo.4106578) [1]. Among the various files corresponding to different protein quantification strategies provided by the authors, we selected those containing iBAQ intensity of chromatograms for further analysis. <br /> 
