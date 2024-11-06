@@ -14,7 +14,7 @@ Please follow the steps below to generate the data required for model training a
 2. To converted the protein sequences into frequency matrix chaos game representation (FCGR) [2], please follow the script: code/preprocess/Generate_seq_FCGR_16x.R. The scaling factor is set to 0.863271 to prevent the overlap of attractors.
 3. Preprocessing of CF-MS data consists of removing samples with missing or all-zero values ​​and then normalizing the values ​​to a range between 0-1. Please follow the script: code/preprocess/Preprocess_EPF.R, to generate needed data.
 4. To fairly compare with other models, we generated fixed splits for FREEPII and other models. Please follow the scripts: code/preprocess/Generate_split.R, and code/preprocess/Generate_cv_split_csv.R, to generate needed split data.
-5. Finally, use the codes in code/preprocess/Prepare_name-idx-dict_and_cv_input.ipynb, and Prepare_seq_FCGR_16x_input.ipynb to convert the pre-processed data into input data suitable for FREEPII.
+5. Finally, use the codes in code/preprocess/Prepare_name-idx-dict_and_cv_input.ipynb, and code/preprocess/Prepare_seq_FCGR_16x_input.ipynb to convert the pre-processed data into input data suitable for FREEPII.
 <br />
 
 ### Run FREEPII
