@@ -22,10 +22,12 @@ Please follow the steps below to generate the data required for model training a
 ### Run FREEPII
 The source code of FREEPII is in the code/FREEPII/FREEPII.ipynb. This code will use SEC2-heavy as an example. <br />
 The model is trained under the scheme of training: testing = 70:30, positive labels: negative labels = 1:1, and performs 5-fold cross-validation. <br />
+The training set is further divided into training set and validation set in a ratio of 80:20. <br />
+The training acc, validation acc, training loss and validation loss of each fold will be recorded and used to confirm whether the model is overfitted. <br />
+The average prediction across all folds will be used to evaluate model performance on PPI classification. <br />
 
 
 ### References
-### Run FREEPII
 
 <br />
 1. Zhao C, Wang Z. (2018) GOGO: An improved algorithm to measure the semantic similarity between gene ontology terms. Sci Rep, 8, 15107.  (GOGO scores)
