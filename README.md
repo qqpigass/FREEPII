@@ -1,4 +1,7 @@
 ## FREEPII <br />
+>>> FREEPII (Feature Representation Enhancement End-to-end Protein Interaction Inference) is a end-to-end learning method encompassing autonomous feature extraction and feature representation enhancement for PPIs and protein complexes inference. <br />
+>>> FREEPII establishes feature maps that are consistent with model training, and emphasizes learning the feature representation of proteins rather than the feature representation of PPI, reducing the computational complexity from N^2 to N (N: number of proteins). <br />
+>>> 
 
 ### Basic data
 The human CF-MS datasets (PXD002892, PXD014820, and PXD015406) were downloaded from Zenodo (doi: 10.5281/zenodo.4106578) [1]. Among the various files corresponding to different protein quantification strategies provided by the authors, we selected those containing iBAQ intensity of chromatograms for further analysis. <br /> 
