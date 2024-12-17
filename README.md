@@ -63,17 +63,24 @@ Users can specify the path to load the saved model parameters (-pretrain_w), and
 Users can also specify the output path through the -out_path command.
 
 ```
-python -W ignore ./Code/run_FREEPII.py -out_path '/FREEPII_github/test_output' -pretrain_w '/FREEPII_github/pretrained_model/SEC2-heayv_best_stat_dict'
+python -W ignore ./Code/run_FREEPII.py -out_path '/FREEPII/test_output' -pretrain_w '/FREEPII/pretrained_model/SEC2-heayv_best_stat_dict'
 
 ```
 
 <br />
 
 ### Evaluate model performance
-Note: The go-basic in GO-data needs to be decompressed after downloading. The current GO association is established based on the go.obo in the folder. If you download a new go.obo, please re-establish the GO association, otherwise there may be an error when running the GOGO operation. <br />
-1. PPI classification performance: The average predictions of FREEPII across all folds will be used to evaluate model overall performance on PPI classification. Evaluation indicators include sensitivity, specificity, Matthews correlation coefficient (MCC), area under the receiver-operator characteristic curve (AUC of ROC), etc. The heldout set is constructed under imbalanced conditions, while the del-fold set consists entirely of negative labeled data. Evaluating the model's performances on these sets can reflect how well the model handles imbalanced data under balanced training. Follow the scripts: code/performance/Performance_PPI.R to get the performance scores. 
-2. Evaluation of the quality of predicted protein complexes (with gold standard): To evaluate the structural compositional similarity between predicted protein complexes and a reference protein complex dataset (gold standard), we use the composite score [3]. The composite score is the sum of three components: Overlap, Accuracy, and Maximum Matching Ratio (MMR) [4]. Follow the scripts: code/performance/Composite_score_Complex.R to calculate the composite scores of the predicted protein complexes.
-4. Evaluation of the quality of predicted protein complexes (without gold-standard): To assess the similarity of protein localization within a protein complex, we measured the colocalization score (defined from [5]) of each predicted protein complex. To assess the functional similarity between proteins within the same protein complex, we used the GOGO method described in [6] to calculate the GOGO score for each predicted protein complex. Follow the code: code/performance/CoLocalization_score_Complex.R, and code/performance/GO_score_Complex.ipynb, to compute these scores.
+Note: The current GO association is established based on the go.obo in the folder. If you download a new go.obo, please re-establish the GO association, otherwise there may be an error when running the GOGO operation. <br />
+1. PPI classification performance: The average predictions of FREEPII across all folds will be used to evaluate model overall performance on PPI classification. Evaluation indicators include sensitivity, specificity, Matthews correlation coefficient (MCC), area under the receiver-operator characteristic curve (AUC of ROC). The heldout set is constructed under imbalanced conditions, while the del-fold set consists entirely of negative labeled data. Evaluating the model's performances on these sets can reflect how well the model handles imbalanced data under balanced training.
+2. Evaluation of the quality of predicted protein complexes (with gold standard): To evaluate the structural compositional similarity between predicted protein complexes and a reference protein complex dataset (gold standard), we use the composite score [3]. The composite score is the sum of three components: Overlap, Accuracy, and Maximum Matching Ratio (MMR) [4].
+4. Evaluation of the quality of predicted protein complexes (without gold-standard): To assess the similarity of protein localization within a protein complex, we measured the colocalization score (defined from [5]) of each predicted protein complex. To assess the functional similarity between proteins within the same protein complex, we used the GOGO method described in [6] to calculate the GOGO score for each predicted protein complex.
+<br />
+Execute the following command to run the evaluation process
+```
+python -W ignore ./Code/model_evaluation.py
+
+```
+
 <br />
 <br />
 
