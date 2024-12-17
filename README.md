@@ -16,6 +16,7 @@ To start running FREEPII, we create an environment for FREEPII and acticate it b
 conda env create –f environment.yml -n FREEPII
 conda activate FREEPII
 ```
+
 <br />
 The go-basic in GO-data needs to be decompressed after downloading. Execute the following command
 ```
