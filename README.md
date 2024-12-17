@@ -25,7 +25,6 @@ To start running FREEPII, we create an environment for FREEPII and acticate it b
 conda env create –f environment.yml -n FREEPII
 conda activate FREEPII
 ```
-
 <br />
 
 
@@ -35,17 +34,21 @@ conda activate FREEPII
 1. The protein complexes set is used to generate labels for PPIs. In this preprocessing step, we first generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes.
 2. Next, we preprocessed the CF-MS data, including removing samples with missing or all-zero values, and then normalizing the values ​​to a range between 0-1.
 3. After processing the data, we generate the input required by FREEPII.
+
 Execute the following command to run the preprocessing process
 ```
 python -W ignore ./Code/preprocess_step.py
 ```
 <br />
+
 The default setting for the model is PXD002892, SEC2-heavy. <br />
 If you want to analyze other data, you can specify the experiment name and experimental conditions
 ```
 python -W ignore ./Code/preprocess_step.py -e_name PXD014820 -e_cond Ctrl
 ```
 <br />
+
+
 
 ### Run FREEPII
 The source code of FREEPII is in the code/FREEPII/FREEPII.ipynb. This code will use SEC2-heavy as an example. <br />
