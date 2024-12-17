@@ -23,7 +23,7 @@ To start running FREEPII, we create an environment for FREEPII and acticate it b
 conda env create –f environment.yml -n FREEPII
 conda activate FREEPII
 ```
-<br />
+
 
 ### Preprocess data and generate input data for the model
 In this preprocessing step, we first generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes.
@@ -35,14 +35,14 @@ Execute the following command to run the preprocessing process
 ```
 python -W ignore ./Code/preprocess_step.py
 ```
-<br />
+
 
 The default setting for the model is PXD002892, SEC2-heavy. <br />
 If you want to analyze other data, you can specify the experiment name (-e_name) and experimental conditions (-e_cond)
 ```
 python -W ignore ./Code/preprocess_step.py -e_name PXD014820 -e_cond Ctrl
 ```
-<br />
+
 
 ### Run FREEPII
 FREEPII is trained under a 5-fold cross-validation scheme. For each fold, the ratio between train:test = 70:30 and the ratio between positive labels:negative labels = 1:1. <br />
