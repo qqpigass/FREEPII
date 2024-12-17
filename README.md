@@ -25,7 +25,7 @@ conda activate FREEPII
 ```
 <br />
 
-### Preprocess data and generate input data for the model
+### Preprocess data and generate input for the model
 In this preprocessing step, we first generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes.
 <br />
 Next, we preprocessed the CF-MS data, including removing samples with missing or all-zero values, and then normalizing the values ​​to a range between 0-1.<br />
