@@ -42,7 +42,7 @@ python -W ignore ./Code/preprocess_step.py
 <br />
 
 The default setting for the model is PXD002892, SEC2-heavy. <br />
-If you want to analyze other data, you can specify the experiment name and experimental conditions
+If you want to analyze other data, you can specify the experiment name (-e_name) and experimental conditions (-e_cond)
 ```
 python -W ignore ./Code/preprocess_step.py -e_name PXD014820 -e_cond Ctrl
 ```
