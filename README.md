@@ -11,10 +11,13 @@ The human protein complex dataset was downloaded from the CORUM database, the hu
 The semantics and relationships between GO terms were retrieved from the GO Consortium released on November 4, 2022. <br /><br />
 
 ### Getting started
-First we create an environment for FREEPII by executing the following command
+To start running FREEPII, we create an environment for FREEPII and acticate it by executing the following command
 ```
 conda env create –f environment.yml -n FREEPII
+conda activate FREEPII
 ```
+
+
 
 
 ### Preprocess data and generate input data for the model
