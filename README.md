@@ -93,8 +93,7 @@ python -W ignore ./Code/model_evaluation.py
 `-out_path`    : specify path of output, default is `'/output'` <br />
 `-pretrain_w`  : specify path to the saved model parameters, default is `'null'` <br />
 <br />
-<br />
-<br />
+
 
 
 
