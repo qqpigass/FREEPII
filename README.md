@@ -20,7 +20,7 @@ sudo apt install p7zip-full
 
 To start running FREEPII, we create an environment for FREEPII and acticate it by executing the following command
 ```
-conda env create –f environment.yml -n FREEPII
+conda env create –-file=environment.yml -n FREEPII
 conda activate FREEPII
 ```
 <br />
