@@ -362,7 +362,7 @@ if args.pretrain_w=='null':
     model_dict = torch.load(model_w_path + '/best_stat_dict')
     print('Load the best model weights in this training')
 else:
-    model_dict = torch.load(args.pretrain_w)
+    model_dict = torch.load(args.root + '/' + args.pretrain_w)
     print('Load the best model weight from: ' + args.pretrain_w)
 
 model_load = Encoderr(hid_dim=16, max_size=emb_size, dropout=0.3, 
