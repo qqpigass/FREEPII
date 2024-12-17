@@ -90,7 +90,7 @@ python -W ignore ./Code/model_evaluation.py
 -split_ratio : specify ratio of train:test, default is 7 (train:70%, test:30%) <br />
 -cv_fold     : specify number of cross validation, default is 5 <br />
 -pn_ratio    : specify ratio of positive labels:negative labels, default is 1 (balanced training) <br />
--out_path    : specify path of output, default is '/FREEPII_output' <br />
+-out_path    : specify path of output, default is '/Output' <br />
 -pretrain_w  : specify path to the saved model parameters, default is 'null' <br />
 <br />
 <br />
