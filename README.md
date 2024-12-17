@@ -63,7 +63,7 @@ Users can specify the path to load the saved model parameters (-pretrain_w), and
 Users can also specify the output path through the -out_path command.
 
 ```
-python -W ignore ./Code/run_FREEPII.py -out_path 'test_output' -pretrain_w '/FREEPII/pretrained_model/SEC2-heayv_best_stat_dict'
+python -W ignore ./Code/run_FREEPII.py -out_path 'test_output' -pretrain_w 'pretrained_model/SEC2-heayv_best_stat_dict'
 ```
 
 <br />
