@@ -64,7 +64,6 @@ Users can also specify the output path through the -out_path command.
 
 ```
 python -W ignore ./Code/run_FREEPII.py -out_path '/FREEPII/test_output' -pretrain_w '/FREEPII/pretrained_model/SEC2-heayv_best_stat_dict'
-
 ```
 
 <br />
@@ -76,10 +75,11 @@ Note: The current GO association is established based on the go.obo in the folde
 4. Evaluation of the quality of predicted protein complexes (without gold-standard): To assess the similarity of protein localization within a protein complex, we measured the colocalization score (defined from [5]) of each predicted protein complex. To assess the functional similarity between proteins within the same protein complex, we used the GOGO method described in [6] to calculate the GOGO score for each predicted protein complex.
 <br />
 Execute the following command to run the evaluation process
-```
-python -W ignore ./Code/model_evaluation.py
 
 ```
+python -W ignore ./Code/model_evaluation.py
+```
+
 
 <br />
 <br />
