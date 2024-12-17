@@ -37,7 +37,7 @@ python -W ignore ./Code/preprocess_step.py
 ```
 
 
-The default setting for the model is PXD002892, SEC2-heavy. <br />
+The default input setting for the model is PXD002892 SEC2-heavy. <br />
 If you want to analyze other data, you can specify the experiment name (-e_name) and experimental conditions (-e_cond)
 ```
 python -W ignore ./Code/preprocess_step.py -e_name PXD014820 -e_cond Ctrl
@@ -57,6 +57,16 @@ Execute the following command to train FREEPII and generate predicted PPIs and c
 python -W ignore ./Code/run_FREEPII.py
 ```
 <br />
+
+We provide model parameters pretrained using PXD002892 SEC2-heavy data. <br />
+Users can specify the path to the saved model parameters (-pretrain_w), and FREEPII will only perform predictions without model training.  <br />
+Users can also specify the output path through the -out_path command.
+
+```
+python -W ignore ./Code/run_FREEPII.py -out_path '/FREEPII_github/test_output' -pretrain_w '/FREEPII_github/FREEPII_output/best_stat_dict'
+
+```
+
 <br />
 
 ### Evaluate model performance
