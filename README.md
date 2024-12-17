@@ -17,8 +17,6 @@ sudo apt update
 sudo apt install p7zip-full
 7z x /GO-data/go-basic.7z
 ```
-<br />
-
 
 To start running FREEPII, we create an environment for FREEPII and acticate it by executing the following command
 ```
