@@ -16,9 +16,14 @@ To start running FREEPII, we create an environment for FREEPII and acticate it b
 conda env create –f environment.yml -n FREEPII
 conda activate FREEPII
 ```
-
-
-
+<br />
+The go-basic in GO-data needs to be decompressed after downloading. Execute the following command
+```
+sudo apt update
+sudo apt install p7zip-full
+7z x /GO-data/go-basic.7z
+```
+<br />
 
 ### Preprocess data and generate input data for the model
 Please follow the steps below to generate the data required for model training and performance evaluation. <br />
