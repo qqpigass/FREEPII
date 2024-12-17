@@ -25,9 +25,6 @@ conda activate FREEPII
 ```
 <br />
 
-
-
-
 ### Preprocess data and generate input data for the model
 1. The protein complexes set is used to generate labels for PPIs. In this preprocessing step, we first generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes.
 2. Next, we preprocessed the CF-MS data, including removing samples with missing or all-zero values, and then normalizing the values ​​to a range between 0-1.
@@ -46,15 +43,18 @@ python -W ignore ./Code/preprocess_step.py -e_name PXD014820 -e_cond Ctrl
 ```
 <br />
 
-
-
 ### Run FREEPII
-The source code of FREEPII is in the code/FREEPII/FREEPII.ipynb. This code will use SEC2-heavy as an example. <br />
-This model is trained under a 5-fold cross-validation scheme. For each fold, the ratio between train:test = 70:30 and the ratio between positive labels:negative labels = 1:1. <br />
+FREEPII is trained under a 5-fold cross-validation scheme. For each fold, the ratio between train:test = 70:30 and the ratio between positive labels:negative labels = 1:1. <br />
 The training acc, testing acc, training loss and testing loss of each fold will be recorded and used to confirm whether the model is overfitted. <br />
 The best model in each fold is determined by the lowest testing loss in that fold and will be evaluated by true positive and true negative scores. <br />
 The final best model is determined by the lowest testing loss across all folds and will be used to generate predictions for all PPIs in the experimental data for cluster analysis. <br />
 The output of FREEPII will include the PPI prediction results of training set, heldout set, del-fold set as well as the prediction results of all PPIs, the protein feature representation learned by the model, and the predicted protein complexes.
+<br />
+
+Execute the following command to train FREEPII and generate predicted PPIs and clusters
+```
+python -W ignore ./Code/run_FREEPII.py
+```
 <br />
 <br />
 
