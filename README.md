@@ -10,6 +10,13 @@ The human protein complex dataset was downloaded from the CORUM database, the hu
 
 The semantics and relationships between GO terms were retrieved from the GO Consortium released on November 4, 2022. <br /><br />
 
+### Getting started
+First we create an environment for FREEPII by executing the following command
+```
+conda env create –f environment.yml -n FREEPII
+```
+
+
 ### Preprocess data and generate input data for the model
 Please follow the steps below to generate the data required for model training and performance evaluation. <br />
 1. The protein complexes set is used to generate labels for PPIs in our task. In this preprocessing step, we will generate a new set of protein complexes containing only members from the CF-MS data and filter out protein complexes consisting of fewer than three genes. Please follow the script: code/preprocess/preprocess_complexes.R,  to generate filtered protein complexes set for further analysis.
