@@ -54,6 +54,10 @@ args.root = ['/'.join(os.getcwd().split('/')[:(i+1)]) for i,v in enumerate(os.ge
 
 if args.output_path=='/FREEPII_output':
     args.output_path = '/'.join([args.root + args.output_path, args.exp_name, args.exp_cond])
+
+if not os.path.exists(args.output_path):
+    os.makedirs(args.output_path)
+
 print('Output path: ' + args.output_path)
 
 DEVICE = 'cpu' # or 'cuda:0'
