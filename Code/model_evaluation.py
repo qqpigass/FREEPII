@@ -46,6 +46,8 @@ args.root = ['/'.join(os.getcwd().split('/')[:(i+1)]) for i,v in enumerate(os.ge
 if args.output_path=='/FREEPII_output':
     args.output_path = '/'.join([args.root + args.output_path, args.exp_name, args.exp_cond])
 
+if not os.path.exists(args.output_path):
+    os.makedirs(args.output_path)
 
 def classification_performance(cur_species='Human', cur_exp_name='PXD002892', cur_exp_cond='SEC2-heavy', 
                                cur_root='/FREEPII_github', output_path='/FREEPII_output'):
