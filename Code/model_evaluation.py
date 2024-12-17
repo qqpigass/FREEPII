@@ -32,7 +32,7 @@ parser.add_argument('-e_cond',      '--exp_cond',         default='SEC2-heavy', 
 parser.add_argument('-split_ratio', '--train_test_ratio', default='7',          help='train_test_ratio',              type=int)
 parser.add_argument('-cv_fold',     '--cv_fold',          default='5',          help='cv_fold_number',                type=int)
 parser.add_argument('-pn_ratio',    '--pn_ratio',         default='1',          help='pos_to_neg_ratio',              type=int)
-parser.add_argument('-out_path',    '--output_path',      default='/Output',    help='output_path',                   type=str)
+parser.add_argument('-out_path',    '--output_path',      default='/output',    help='output_path',                   type=str)
 parser.add_argument('-pretrain_w',  '--pretrain_w',       default='null',       help='path_to_pretrain_model_weight', type=str)
 args = parser.parse_args()
 # args = parser.parse_args([])
@@ -43,14 +43,14 @@ if '\\' in os.getcwd():
 
 args.root = ['/'.join(os.getcwd().split('/')[:(i+1)]) for i,v in enumerate(os.getcwd().split('/')) if v=='FREEPII'][0]
 
-if args.output_path=='/Output':
+if args.output_path=='/output':
     args.output_path = '/'.join([args.root + args.output_path, args.exp_name, args.exp_cond])
 
 if not os.path.exists(args.output_path):
     os.makedirs(args.output_path)
 
 def classification_performance(cur_species='Human', cur_exp_name='PXD002892', cur_exp_cond='SEC2-heavy', 
-                               cur_root='/FREEPII', output_path='/Output'):
+                               cur_root='/FREEPII', output_path='/output'):
     input_path = '/'.join([cur_root + '/input', cur_exp_name, cur_exp_cond])
     
     split_path = [input_path + '/' + i for i in os.listdir(input_path) if 'ref' in i or 'heldout' in i 
@@ -120,7 +120,7 @@ def classification_performance(cur_species='Human', cur_exp_name='PXD002892', cu
 
 
 def clustering_composite_score(cur_species='Human', cur_exp_name='PXD002892', cur_exp_cond='SEC2-heavy', 
-                               cur_root='/FREEPII', output_path='/Output'):
+                               cur_root='/FREEPII', output_path='/output'):
     input_path = '/'.join([cur_root + '/input', cur_exp_name, cur_exp_cond])
     
     dict_path = input_path + '/name_idx_dict_' + cur_exp_cond + '.pickle'
@@ -180,7 +180,7 @@ def clustering_composite_score(cur_species='Human', cur_exp_name='PXD002892', cu
 
 
 def clustering_colocalization_score(cur_species='Human', cur_exp_name='PXD002892', cur_exp_cond='SEC2-heavy', 
-                                    cur_root='/FREEPII', output_path='/Output'):
+                                    cur_root='/FREEPII', output_path='/output'):
     input_path = '/'.join([cur_root + '/input', cur_exp_name, cur_exp_cond])
     
     dict_path = input_path + '/name_idx_dict_' + cur_exp_cond + '.pickle'
@@ -260,7 +260,7 @@ def clustering_colocalization_score(cur_species='Human', cur_exp_name='PXD002892
 
 
 def clustering_GO_score(cur_species='Human', cur_exp_name='PXD002892', cur_exp_cond='SEC2-heavy', 
-                        cur_root='/FREEPII', output_path='/Output'):
+                        cur_root='/FREEPII', output_path='/output'):
     input_path = '/'.join([cur_root + '/input', cur_exp_name, cur_exp_cond])
     
     dict_path = input_path + '/name_idx_dict_' + cur_exp_cond + '.pickle'
