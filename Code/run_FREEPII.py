@@ -41,7 +41,7 @@ parser.add_argument('-e_cond',      '--exp_cond',         default='SEC2-heavy', 
 parser.add_argument('-split_ratio', '--train_test_ratio', default='7',          help='train_test_ratio',              type=int)
 parser.add_argument('-cv_fold',     '--cv_fold',          default='5',          help='cv_fold_number',                type=int)
 parser.add_argument('-pn_ratio',    '--pn_ratio',         default='1',          help='pos_to_neg_ratio',              type=int)
-parser.add_argument('-out_path',    '--output_path',      default='/Output',    help='output_path',                   type=str)
+parser.add_argument('-out_path',    '--output_path',      default='/output',    help='output_path',                   type=str)
 parser.add_argument('-pretrain_w',  '--pretrain_w',       default='null',       help='path_to_pretrain_model_weight', type=str)
 args = parser.parse_args()
 # args = parser.parse_args([])
@@ -52,7 +52,7 @@ if '\\' in os.getcwd():
 
 args.root = ['/'.join(os.getcwd().split('/')[:(i+1)]) for i,v in enumerate(os.getcwd().split('/')) if v=='FREEPII'][0]
 
-if args.output_path=='/Output':
+if args.output_path=='/output':
     args.output_path = '/'.join([args.root + args.output_path, args.exp_name, args.exp_cond])
 
 if not os.path.exists(args.output_path):
