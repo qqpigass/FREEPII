@@ -80,15 +80,17 @@ Execute the following command to run the evaluation process
 python -W ignore ./Code/model_evaluation.py
 ```
 
+<br />
+<br />
 ### Commands for FREEPII
 -sp : specify species, default is "Human" <br />
 -e_name : specify experiment name, default is "PXD002892" <br />
 -e_cond : specify experimental conditions, default is "SEC2-heavy" <br />
--split_ratio : specify ratio of train:test, default is 7 (train:70%, test:30%)
--cv_fold : specify number of cross validation, default is 5
--pn_ratio : specify ratio of positive labels:negative labels, default is 1 (balanced training)
--out_path : specify path of output, default is '/FREEPII_output'
--pretrain_w : specify path to the saved model parameters, default is 'null'
+-split_ratio : specify ratio of train:test, default is 7 (train:70%, test:30%) <br />
+-cv_fold : specify number of cross validation, default is 5 <br />
+-pn_ratio : specify ratio of positive labels:negative labels, default is 1 (balanced training) <br />
+-out_path : specify path of output, default is '/FREEPII_output' <br />
+-pretrain_w : specify path to the saved model parameters, default is 'null' <br />
 <br />
 <br />
 <br />
