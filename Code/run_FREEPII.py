@@ -54,6 +54,8 @@ args.root = ['/'.join(os.getcwd().split('/')[:(i+1)]) for i,v in enumerate(os.ge
 
 if args.output_path=='/output':
     args.output_path = '/'.join([args.root + args.output_path, args.exp_name, args.exp_cond])
+else:
+    args.output_path = args.root + '/' + args.output_path
 
 if not os.path.exists(args.output_path):
     os.makedirs(args.output_path)
