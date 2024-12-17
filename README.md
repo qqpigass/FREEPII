@@ -58,7 +58,7 @@ python -W ignore ./Code/run_FREEPII.py
 ```
 <br />
 
-We provide model parameters pretrained using PXD002892 SEC2-heavy data. <br />
+We provide parameters of model pretrained using PXD002892 SEC2-heavy data. <br />
 Users can specify the path to load the saved model parameters (-pretrain_w), and FREEPII will only perform predictions without model training.  <br />
 Users can also specify the output path through the -out_path command.
 
