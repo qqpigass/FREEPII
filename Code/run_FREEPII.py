@@ -371,6 +371,17 @@ model_load.load_state_dict(model_dict)
 model_load.eval()
 
 
+#### Save labeled predictions
+if args.pretrain_w!='null':
+    with torch.no_grad():
+        _, train_pred, _   = model_load(epf, seq, train_edge, in_list=seq_in_exp_idx, off_list=seq_off_exp_idx)
+        _, heldout_pred, _ = model_load(epf, seq, heldout_edge, in_list=seq_in_exp_idx, off_list=seq_off_exp_idx)
+        _, del_pred, _     = model_load(epf, seq, delfold_edge, in_list=seq_in_exp_idx, off_list=seq_off_exp_idx)
+    np.savez(predict_path + '/train_out',   train_pred.detach().numpy())
+    np.savez(predict_path + '/heldout_out', heldout_pred.detach().numpy())
+    np.savez(predict_path + '/delfold_out', del_pred.detach().numpy())
+
+
 all_edge = torch.cat([train_edge, heldout_edge, delfold_edge, exp_edge], 0)
 label_edge = torch.cat([train_edge, heldout_edge, delfold_edge], 0)
 
