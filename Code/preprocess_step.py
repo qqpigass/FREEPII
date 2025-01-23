@@ -426,7 +426,11 @@ def generate_split(cur_species='Human', cur_exp_name='PXD002892', cur_exp_cond='
     reference = reference.iloc[shuff,:].reset_index(drop=True) # shuffle the interactions
 
     break_idx = list(range(0, ref_tp.shape[0], int(ref_tp.shape[0] / cur_cv_fold)))
-    break_idx[len(break_idx)-1] = ref_tp.shape[0]
+
+    if len(break_idx)==cur_cv_fold:
+        break_idx = break_idx + [ref_tp.shape[0]]
+    else:
+        break_idx[len(break_idx)-1] = ref_tp.shape[0]
 
     shuff = list(range(ref_tp.shape[0]))
     random.seed(123)
